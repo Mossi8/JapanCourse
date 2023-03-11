@@ -1,0 +1,41 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20420\viewh12360\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #1. Write a function that calculates the ratio of the mean and the median of a given vector.\
+mean_median_ratio <- function(v) \{\
+  mean_ <- mean(v)\
+  median_ <- median(v)\
+  mean_/median_\
+\}\
+\
+mean_median_ratio(1:50)\
+#2. Write a function that ignores the lowest and the highest value from a given vector and calculate the mean.\
+\
+rem_and_mean<- function(v) \{\
+  min_ <- min(v)\
+  max_ <- max(v)\
+  v = v[which(v > min_)]\
+  v = v[which(v < max_)]\
+  mean(v)\
+\}\
+\
+rem_and_mean(1:50)\
+\
+\
+#3. Read about piping from here:https://r4ds.had.co.nz/pipes.html#pipes (you don\'92t have\
+#to learn everything, a basic understanding of the usage is enough). Write a short\
+#(max. 300 characters, no spaces) \
+Piping allows to concatenate operation without the need of storing multiple variables that would be used in intermediate steps.\
+\
+#4. Familiarize yourself with the apply-family of functions (apply, lapply, sapply etc.)\
+#http://uc-r.github.io/apply_family\
+#Write a short explanation (max. 300 characters, no spaces) of why they could be\
+#useful in your work.\
+\
+Apply, sapply and lapply allow to use functions on a vector but they differ in the outputs that they produce. \
+Apply takes a dataframe or matrix. Lapply applies a function over a list and returns a list. And sapply applies a function on a \
+list or vector and returns a vector or matrix and simplifies the output.}
